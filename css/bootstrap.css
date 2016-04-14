@@ -10,7 +10,11 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    margin: 0;
+    /*
+     * AWS: included to ensure non-zero left margin
+     */
+    margin-left: 10px;
 }
 article,
 aside,
