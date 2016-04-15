@@ -1,0 +1,2 @@
+Michael Buchoff: "Nuclear uncertainties from the nuclear database in the context of the asteroid deflection project"
+Ian Vernon: "Bayesian statistics applied to complex models of physical systems"
