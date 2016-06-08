@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayesian Methods in Nuclear Physics</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- MathJAX support -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script type="text/javascript"
+	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <!-- End MathJAX support -->
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+      
+      <div class="row">
+
+	<h1>Bayesian Methods in Nuclear Physics</h1>
+	<p>A workshop at
+	  the <a href="http://www.int.washington.edu">Institute for
+	    Nuclear Theory</a> at the University of Washington in
+	  Seattle from June 13 to July 8, 2016</p>
+	<p><b>Goal:</b> This program will bring statisticians and
+	  nuclear practitioners together to explore how Bayesian
+	  inference can enable progress on the frontiers of nuclear
+	  physics and open up new directions for the field.
+	</p>
+	
+	<hr>
+
+	<!-- Full calendar active when the 
+	     user's window is sufficiently wide
+	  -->
+	<!-- 
+	     <span class="hidden-xs">
+	       <div class="col-sm-8">
+		 <h2>Schedule</h2>
+		 <table class="table">
+		   <thead>
+		     <tr>
+		       <td width="20%">M</td><td width="20%">T</td>
+		       <td width="20%">W</td><td width="20%">Th</td>
+		       <td width="20%">F</td>
+		     </tr>
+		   </thead>
+		   <tbody>
+		     <tr>
+		       <td>Jun. 13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+		     </tr>
+		     <tr>
+		       <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
+		     </tr>
+		     <tr>
+		       <td>27</td><td>28</td><td>29</td><td>30</td><td>Jul. 1</td>
+		     </tr>
+		     <tr>
+		       <td>4<br>(Independence day)</td>
+		       <td>5</td><td>6</td><td>7</td><td>8</td>
+		     </tr>
+		     <tr>
+		   </tbody>
+		 </table>
+	       </div>
+	     </span> -->
+	
+	<!-- Smaller calendar for thin clients -->
+	<!-- 
+	     <span class="hidden-sm hidden-md hidden-lg">
+	       -->
+	
+	<div class="col-sm-8">
+	  <h2>Current Schedule Week 1</h2>
+	  We expect the speakers to plan to speak for 45 minutes
+	  and leave 15 minutes for questions. 
+	  <table class="table">
+            <thead>
+              <tr>
+		<td>Date</td><td>Time</td><td>Speaker</td><td>Title</td>
+	      </tr>
+	    </thead>
+            <tbody>
+              <tr><td>Mon. 13</td><td>9:00-9:30</td>
+		<td>Organizers</td>
+		<td>Introduction and planning</td>
+	      </tr>
+              <tr><td>Mon. 13</td><td>9:30-10:30</td><td>Derek Bingham</td>
+		<td>An introduction to Bayesian statistics and
+		  model calibration</td></tr>
+              <tr><td>Mon. 13</td><td>11-12</td>
+		<td>Donald Smith</td>
+		<td>The Bayesian Unified Monte Carlo Method for
+		  Evaluating and Utilizing Nuclear Reaction
+		  Data</td></tr>
+              <tr><td>Mon. 13</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 14</td><td>9-10</td>
+		<td>Bartlomiej Szpak</td>
+		<td>Sloppiness of nuclear structure models</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 14</td><td>10:30-11:30</td>
+		<td>Denise Neudecker</td>
+		<td>Going beyond generalized least squares algorithms
+		  for estimating nuclear data observables</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 14</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Wed. 15</td><td>9-10</td>
+		<td>David Ireland</td>
+		<td>Baryon Spectroscopy: Data Consistency and Model
+		  Discrimination</td></tr>
+              <tr><td>Wed. 15</td><td>10:30-11:30</td>
+		<td>Jonah Bernhard/Steffen Bass</td>
+		<td>Extraction of quark-gluon-plasma properties via a
+		  model to data analysis of relativistic heavy-ion
+		  collisions</td></tr>
+              <tr><td>Wed. 15</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 16</td><td>9-10</td>
+		<td>Harald Griesshammer</td>
+		<td>A Pedestrian's Perspective of Applying Bayesian
+		  Statistics in Effective Field Theories</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 16</td><td>10:30-11:30</td>
+		<td>Dario Vretenar</td>
+		<td>Sloppy nuclear energy density functionals: model
+		  reduction by manifold boundaries</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 16</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Fri. 17</td><td>9-10</td>
+		<td></td>
+		<td>Statistical Discussion</td></tr>
+              <tr><td>Fri. 17</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+	    </tbody>
+	  </table>
+	  <h2>Current Schedule Week 2</h2>
+	  We expect the speakers to plan to speak for 45 minutes
+	  and leave 15 minutes for questions. 
+	  <table class="table">
+            <thead>
+              <tr>
+		<td>Date</td><td>Time</td><td>Speaker</td><td>Title</td>
+	      </tr>
+	    </thead>
+	    <tbody>
+              <tr><td>Mon. 20</td><td>9:00-9:30</td>
+		<td>Organizers</td>
+		<td>Introduction and planning</td>
+	      </tr>
+              <tr><td>Mon. 20</td><td>9:30-10:30</td>
+		<td>Earl Lawrence</td><td></td></tr>
+              <tr><td>Mon. 20</td><td>11-12</td>
+		<td>Jussi Auvinen</td>
+		<td>Constraining the input parameters of a
+		  transport+hydrodynamics model of heavy ion collisions
+		  in RHIC beam energy scan range with the help of
+		  Gaussian emulators</td></tr>
+              <tr><td>Mon. 20</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 21</td><td>9-10</td>
+		<td>Andre Walker-Loud</td>
+		<td>A poor man’s attempt at fancy fitting of noisy
+		  lattice QCD data with exponentially degrading
+		  signal-to-noise ratios</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 21</td><td>10:30-11:30</td>
+		<td>Chong Qi</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 21</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Wed. 22</td><td>9-10</td>
+		<td>Karim Bennaceur</td>
+		<td>Fitting nonlocal energy density functionals for
+		  low-energy nuclear structure</td></tr>
+              <tr><td>Wed. 22</td><td>10:30-11:30</td>
+		<td>Rodrigo Navarro Perez</td>
+		<td>Statistical analysis of Nucleon-Nucleon
+		  interactions</td></tr>
+              <tr><td>Wed. 22</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 23</td><td>9-10</td>
+		<td>Jason Lang</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 23</td><td>10:30-11:30</td>
+		<td>Sarah Wesolowski</td>
+		<td>Bayesian parameter estimation for effective field
+		  theories</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 23</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Fri. 24</td><td>9-10</td>
+		<td>TBA</td><td></td></tr>
+              <tr><td>Fri. 24</td><td>10:30-11:30</td>
+		<td>Doron Gazit</td>
+		<td>Bayes this! Identifying and quantifying
+		  theoretical uncertainties.</td></tr>
+              <tr><td>Fri. 24</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+	    </tbody>
+	  </table>
+	  <h2>Current Schedule Week 3</h2>
+	  We expect the speakers to plan to speak for 45 minutes
+	  and leave 15 minutes for questions. 
+	  <table class="table">
+            <thead>
+              <tr>
+		<td>Date</td><td>Time</td><td>Speaker</td><td>Title</td>
+	      </tr>
+	    </thead>
+	    <tbody>
+              <tr><td>Mon. 27</td><td>9:00-9:30</td>
+		<td>Organizers</td>
+		<td>Introduction and planning</td>
+	      </tr>
+              <tr><td>Mon. 27</td><td>9:30-10:30</td>
+		<td>Nozer Singpurwalla</td><td></td></tr>
+              <tr><td>Mon. 27</td><td>11-12</td>
+		<td>James Lattimer</td><td></td></tr>
+              <tr><td>Mon. 27</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 28</td><td>9-10</td>
+		<td>Kyle Wendt</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 28</td><td>10:30-11:30</td>
+		<td>Xilin Zhang</td>
+		<td>How well do we understand \( {^{7}\mathrm{Be}}+\gamma
+		  \rightarrow {^{8}\mathrm{B}}+\gamma \) ? A Bayesian
+		  Analysis Based on Effective Field Theory</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 28</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Wed. 29</td><td>9-10</td>
+		<td>Scott Pratt</td><td>Transforming Heavy-Ion Physics
+		  into a Quantitative Science</td></tr>
+              <tr><td>Wed. 29</td><td>10:30-11:30</td>
+		<td>Michael Buchoff</td>
+		<td>Propagating nuclear uncertainties from the nuclear
+		  database in the context of the asteroid deflection
+		  project</td></tr>
+              <tr><td>Wed. 29</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 30</td><td>9-10</td>
+		<td>Ron Soltz</td>
+		<td>Application of Bayesian Methods to Finding Jets in
+		  Heavy Ion Collisions, and potential applications in
+		  Nuclear Security</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 30</td><td>10:30-11:30</td>
+		<td>Ben Lackey</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 30</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Fri. 1</td><td>9-10</td>
+		<td>Robert Gramacy/Gabriel Huerta</td><td></td></tr>
+              <tr><td>Fri. 1</td><td>10:30-11:30</td>
+		<td>Witek Nazarewicz</td>
+		<td>Nuclear charge and neutron radii and nuclear
+		  matter: correlation analysis in Skyrme-DFT</td></tr>
+              <tr><td>Fri. 1</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+	    </tbody>
+	  </table>
+	  <h2>Current Schedule Week 4</h2>
+	  We expect the speakers to plan to speak for 45 minutes
+	  and leave 15 minutes for questions. 
+	  <table class="table">
+            <thead>
+              <tr>
+		<td>Date</td><td>Time</td><td>Speaker</td><td>Title</td>
+	      </tr>
+	    </thead>
+	    <tbody>
+              <tr><td>Mon. 4</td><td>9-10</td>
+		<td>Ian Vernon</td>
+		<td>Bayesian statistics applied to complex models of
+		  physical systems</td></tr>
+              <tr><td>Mon. 4</td><td>10:30-11:30</td>
+		<td>Natalie Klco/Daniel Phillips</td>
+		<td>Error plots, Bayesian methods, and model selection
+		  in EFT</td></tr>
+              <tr><td>Mon. 4</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 5</td><td>9-10</td>
+		<td>Andreas Ekstrom</td>
+		<td>Uncertainty quantification in ab initio nuclear
+		  theory</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 5</td><td>10:30-11:30</td>
+		<td>Rebecca Surman</td>
+		<td>Connecting nuclear masses to the mysterious
+		  origins of the heavy elements</td></tr>
+              <tr bgcolor="#eeeeee"><td>Tue. 5</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Wed. 6</td><td>9-10</td>
+		<td>Sophia Han</td><td></td></tr>
+              <tr><td>Wed. 6</td><td>10:30-11:30</td>
+		<td>Jorge Piekarewicz</td>
+		<td>Constraining Neutron Star Properties from
+		  Laboratory Experiments</td></tr>
+              <tr><td>Wed. 6</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 7</td><td>9-10</td>
+		<td>Jerome Margueron</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 7</td><td>10:30-11:30</td>
+		<td>Nicolas Yunes</td><td></td></tr>
+              <tr bgcolor="#eeeeee"><td>Thu. 7</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+              <tr><td>Fri. 8</td><td>9-10</td>
+		<td>Matthew Plumlee</td><td></td></tr>
+              <tr><td>Fri. 8</td><td>10:30-11:30</td>
+		<td>Anatoli Afansjev</td><td>The uncertainty
+		  quantifications in covariant density functional
+		  theory</td></tr>
+              <tr><td>Fri. 8</td><td>3-4pm</td>
+		<td>Discussion session</td>
+		<td>TBA</td></tr>
+	    </tbody>
+	  </table>
+	</div>
+	
+	<!-- </span> -->
+	
+	<div class="col-sm-4">
+	  <h2>Information</h2>
+	  <p>Discussion <a href="questions.html">questions</a></p>
+	  <p><a href="http://www.int.washington.edu/PROGRAMS/16-2a/">Workshop
+	      page</a> at the INT<br> 
+	    Get an
+	    <a href="http://www.int.washington.edu/preprint_form.html">preprint
+	      number</a>
+	  </p>
+	  <p>
+	    <b>Coordinator:</b>
+	    Farha Habib
+	  </p>
+	  <p>
+	    <b>Organizers:</b><br>
+	    Nicolas Schunck (lead)<br>
+	    <a href="https://www.physics.ohio-state.edu/~furnstah/">Dick
+	      Furnstahl</a><br>
+	    <a href="https://www.bi.vt.edu/faculty/Dave-Higdon">Dave
+	      Higdon</a><br>
+	    <a href="http://web.utk.edu/~asteine1/">Andrew
+	      Steiner</a><br>
+	  </p>
+	</div>
+
+      </div>
+
+      <!-- End of container -->
+    </div> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
