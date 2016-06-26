@@ -1,0 +1,380 @@
+/**
+   CSSS basic slideshow theme
+   
+   @author Lea Verou
+   @version 1.0
+*/
+
+* {
+    padding:0;	
+    margin:0;
+    font:inherit;
+    color:inherit;
+}
+
+body {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, 
+    Arial, sans-serif;
+    /*
+  font-family: Perpetua, Baskerville, "Big Caslon", 
+               "Palatino Linotype", Palatino, "URW Palladio L", 
+               "Nimbus Roman No9 L", serif;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", 
+               "Hoefler Text", "Times New Roman", serif;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", 
+               Garamond, "Times New Roman", serif;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, 
+               Georgia, serif;
+   */
+    /* font-family: sans-serif; */
+    font-size: 125%;
+    /*  font-size: 75%; */
+}
+
+.slide {
+    /* top LR bottom */
+    padding:0 2.5% 0;
+    /* background: linear-gradient(to bottom,
+rgb(180,180,180),rgb(255,255,255)); */
+    background: rgb(240,240,240);
+    background-clip: padding-box;
+    color: black;
+}
+
+.slide h2 {
+    font-size: 150%;
+}
+
+.slide p, .slide li {
+    letter-spacing: -.03em;
+}
+
+.slide ol {
+    margin-left:2em;	
+}
+
+.slide > ul ul {
+    margin-left:2em;	 
+}
+
+.slide li li {
+    font-size:80%;
+}
+
+.slide li {
+    /* TRBL */
+    margin: 1.3em 2em 1.3em 2em;
+    /* TB RL */
+    /* margin: .2em 2em; */
+}
+
+.tight li {
+    /* TB RL */
+    margin: .2em 2em;
+}
+
+.loose li {
+    /* TB RL */
+    margin: 2em 2em;
+}
+
+.slide > ul > li:before {
+    padding-right: .2em;
+}
+
+.slide li li:before {
+    padding-right: .2em;
+}
+
+/* ------------------------------------------------------- */
+
+.vtd_row1 {
+    padding: 10px;
+    background-color: #ccffff;
+    width: 200px;
+}
+.vtd_row2 {
+    padding: 10px;
+    background-color: #ffcccc;
+    width: 250px;
+}
+.vtd_row2b {
+    padding: 10px;
+    background-color: #ffcccc;
+    border: 1px solid black;
+    width: 250px;
+}
+.vtd_row3 {
+    padding: 10px;
+    background-color: #ccffcc;
+    width: 250px;
+}
+.vtd_row4 {
+    padding: 10px;
+    background-color: #ccccff;
+    width: 250px;
+}
+
+.vtable {
+    text-align: center;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.myquote {
+    font-style: italic;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.tiny {
+    font-size: 60%;
+}
+
+.small {
+    font-size: 90%;
+}
+
+.smaller {
+    font-size: 75%;
+}
+
+.large {
+    font-size: 150%;
+}
+
+.white {
+    color: rgb(255,255,255);
+}
+
+.ltgray {
+    color: rgb(240,240,240);
+}
+
+.dkred {
+    color: rgb(100,50,50);
+}
+
+.dkred2 {
+    color: rgb(150,50,50);
+}
+
+.dkblue {
+    color: rgb(50,50,200);
+}
+
+.red {
+    color: rgb(255,0,0);
+}
+
+.spnote {
+    color: rgb(255,0,0);
+}
+
+.title {
+    text-align: center;
+    color: rgb(20,20,160);
+    font-weight: bold;
+}
+
+.reference {
+    font-size: 75%;
+    color: rgb(100,100,255);
+}
+
+.creference {
+    font-size: 75%;
+    color: rgb(100,100,255);
+    text-align: center;
+}
+
+.creferencesm {
+    font-size: 50%;
+    color: rgb(100,100,255);
+    text-align: center;
+}
+
+.lefttitle {
+    color: rgb(20,20,160);
+    font-weight: bold;
+    margin-left: 0.6em;
+}
+
+.imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------------------------------------------- */
+
+#indicator {
+    background: rgba(255, 255, 255, .6);
+    color: black;
+    text-shadow: .03em .03em .1em white;
+}
+
+button {
+    padding:.2em .5em;
+}
+
+a:hover {
+    text-shadow: 0 0 .5em white, 0 0 1em white;
+}
+
+select {
+    color: black;
+}
+
+code, pre, style, textarea, input {
+    font-family: Consolas, 'Andale Mono', 'Courier New', monospace;	
+    background:rgba(0,0,0,.4);
+}
+
+code {
+    padding:.2em .2em .1em;
+    white-space: nowrap;
+    border-radius:.2em;
+    border: 1px solid rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), 
+    inset 0 1px rgba(255,255,255,0.3), 
+    inset 0 12px rgba(255,255,255,0.15), 
+    inset 0 10px 20px rgba(255,255,255,0.25), 
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+pre, style, textarea {
+    padding:.3em .5em;
+    margin-left: -.1em;
+    border:2px solid rgba(255, 255, 255, .1);
+    box-shadow:.1em .1em .5em black inset;
+}
+
+pre > code {
+    padding: 0;
+    white-space: pre;
+    border: 0;
+    background: 0;
+    box-shadow: none;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+strong, b {
+    font-weight:bold;	
+}
+
+pre strong {
+    text-shadow: 0 0 .6em white;
+}
+
+section > header.slide {
+    background-color: rgba(0,0,0,.8);
+}
+
+section > header.slide > h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -.6em;
+    font-size: 400%;
+    line-height: 1;
+    text-align: center;
+}
+
+.slide .emphasis {
+    padding: .4em .5em .3em;
+    margin: .3em 0;
+    background: #f80;
+    background: linear-gradient(#fa0, #f80);
+    color: white;
+    font-weight: bold;
+    letter-spacing: -.05em;
+    line-height: .85;
+    text-shadow: .05em .05em .1em rgba(0,0,0,.4);
+    border-radius: .3em;
+    box-shadow:.1em .1em .5em black;
+}
+
+.light.slide .emphasis {
+    box-shadow:.1em .1em .5em rgba(0,0,0,.4);
+}
+
+.slide .emphasis::before {
+    content: '\279C';
+    color: rgba(255,255,255,.5);
+    float: left;	
+    width: .75em;
+    height: 0;
+    padding: .45em 0 .3em;
+    margin: -.2em .2em 0 -.25em;
+    border: .12em solid;
+    text-align: center;
+    line-height: 0;
+    font-size: 120%;
+    font-family: inherit;
+    text-shadow: none;
+    border-radius:999px;
+    transform: rotate(45deg);
+}
+
+.attribution {
+    background: rgba(0,0,0,.8);
+    color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    padding: .5em 1em;
+    font-size: 30%;
+    text-shadow: .05em .05em .1em black;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+.attribution a::after {
+    content:  ' (' attr(href) ')';
+}
+
+/* Syntax highlighting */
+
+.comment {
+    color: #999;
+}
+
+.string {
+    color: yellow;
+}
+
+.keyword {
+    font-weight: bold;
+    color: deeppink;
+}
+
+.number, .boolean {
+    color: #0cf;
+}
+
+.regex {
+    color: orange;
+}
+
+#css-controls-demo label {
+    display: block;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:0) {
+    /* hack to avoid using the Object element in Safari/WebKit, 
+       due to WebKit Bug 27190 */
+    object[type="image/svg+xml"] {
+	display: none;
+    }
+}
