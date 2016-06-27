@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JUN 2016 07:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JUN 2016 08:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -400,11 +400,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Bayes_INT_white_paper.toc)
+(./tex/contributors.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+ []
+
+
+Overfull \hbox (20.2359pt too wide) in paragraph at lines 4--30
+[][]  [] 
+ []
+
+) [2] (./Bayes_INT_white_paper.toc)
 \tf@toc=\write4
 \openout4 = `Bayes_INT_white_paper.toc'.
 
- [2] (./tex/overview.tex
+ [3] (./tex/overview.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 6.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
@@ -430,14 +450,14 @@ Missing character: There is no œ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
- [3] [4] [5]
-[6]
+ [4] [5] [6]
+[7]
 Overfull \hbox (6.36511pt too wide) in paragraph at lines 230--233
 []\OT1/cmr/m/n/12 A. Steiner: I'm us-ing the method out-lined [][]$http : / / w
 ww . math . nyu . edu / faculty /
  []
 
-) (./tex/background.tex [7]) (./tex/themes.tex
+) (./tex/background.tex [8]) (./tex/themes.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 30.
@@ -454,42 +474,33 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 30.
 
-[8]) [9] (./tex/literature.tex) (./tex/notation.tex) (./tex/git.tex) [10
+[9]) [10] (./tex/literature.tex) (./tex/notation.tex) (./tex/git.tex) [11
 
 ]
-[11] (./Bayes_INT_white_paper.bbl (./Bayes_INT_white_paper.brf)
+[12] (./Bayes_INT_white_paper.bbl (./Bayes_INT_white_paper.brf)
 \tf@brf=\write5
 \openout5 = `Bayes_INT_white_paper.brf'.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
- [12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+ [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 
 (./Bayes_INT_white_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `Bayes_INT_white_paper.out' has not changed.
 (rerunfilecheck)             Checksum: C221C9AA4C74C568F2CE36B3AEA1B8AE;5080.
-
-
-Package rerunfilecheck Warning: File `Bayes_INT_white_paper.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `Bayes_INT_white_paper.brf':
-(rerunfilecheck)             Before: 237DF6F0E40E840E7378F5555DEE3B4D;201
-(rerunfilecheck)             After:  400C57E4FF315C9B8F744E7020F9A55C;203.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
+Package rerunfilecheck Info: File `Bayes_INT_white_paper.brf' has not changed.
+(rerunfilecheck)             Checksum: 55BB2661643C2EB3DC0A0CDBFF38FC20;203.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 11254 strings out of 493089
- 160619 string characters out of 6134842
- 233015 words of memory out of 5000000
+ 11258 strings out of 493089
+ 160680 string characters out of 6134842
+ 233021 words of memory out of 5000000
  14562 multiletter control sequences out of 15000+600000
  18443 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -504,10 +515,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Bayes_INT_white_paper.pdf (12 pages, 141419 bytes).
+Output written on Bayes_INT_white_paper.pdf (13 pages, 142521 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
