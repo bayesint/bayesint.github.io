@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}      	
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{fancyhdr}
+
+
+%
+\usepackage[pagebackref=true,colorlinks=true,pdfpagelabels]{hyperref}
+\hypersetup{
+     unicode=true,          % non-Latin characters in Acrobats bookmarks
+     pdfnewwindow=true,      % links to different pdfs in new window
+     bookmarksnumbered=true,
+     colorlinks=true,       % false: boxed links; true: colored links
+     linkcolor=blue,          % color of internal links
+     citecolor=darkgreen,        % color of links to bibliography
+     filecolor=magenta,      % color of file links
+     urlcolor=cyan,           % color of external links
+     menucolor=blue,
+     linktocpage=true
+}
+
+\urlstyle{rm} %have urls printed in normal font, not texttt font
+\textwidth 6.45in
+\textheight 9.0in
+\voffset -0.9in
+\hoffset -0.65in
+%\renewcommand{\familydefault}{\sfdefault}
+
+% WAZ: Below tweaks taken directly from http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html 
+%
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %
+    %   General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	        % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+%
+%   Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}                       % 2 may work better
+\setcounter{dbltopnumber}{2}                    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	        % allow minimal text w. figs
+%
+%   Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+%
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+\graphicspath{{./figures/}}
+
+\input{local_defs.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+\title{White Paper: Bayesian Methods in Nuclear Physics}
+
+\author{Edited by R.J.\ Furnstahl, D. Higdon, N. Schunck, and A.W.\ Steiner}
+
+\date{\today\vspace {1.8in}}
+
+\maketitle
+
+\begin{abstract}
+	The INT program on ``Bayesian Methods for Nuclear Physics''
+\end{abstract}
+
+\newpage
+
+\definecolor{darkgreen}{rgb}{0,.7,0}.
+
+
+\setcounter{tocdepth}{2}
+\tableofcontents{}
+
+\newpage
+
+
+
+\input{tex/overview}
+
+\input{tex/background}
+
+\input{tex/themes}
+
+\clearpage
+
+\appendix
+
+\input{tex/literature}
+
+\input{tex/notation}
+
+\input{tex/git}
+
+
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{tex/atlasnote}  
+\bibliography{Bayes_INT_white_paper}
+
+\end{document}

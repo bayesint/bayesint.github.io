@@ -1,0 +1,23 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Sivia:2006}
+D.~Sivia and J.~Skilling, {\em Data Analysis: A Bayesian Tutorial}.
+\newblock Oxford University Press, 2006.
+
+\bibitem{Gregory:2005}
+P.~Gregory, {\em Bayesian Logical Data Analysis for the Physical Sciences}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem{Trotta:2008qt}
+R.~Trotta, {\em {Bayes in the sky: Bayesian inference and model selection in
+  cosmology}\/},  \href{http://dx.doi.org/10.1080/00107510802066753}{Contemp.
+  Phys. {\bf 49} (2008)  71--104},
+\href{http://arxiv.org/abs/0803.4089}{{\tt arXiv:0803.4089 [astro-ph]}}.
+%%CITATION = ARXIV:0803.4089;%%.
+
+\bibitem{Gelman03}
+A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin, {\em Bayesian Data
+  Analysis}.
+\newblock Chapman and Hall/CRC, 2003.
+
+\end{thebibliography}\endgroup

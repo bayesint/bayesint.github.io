@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Bayes_INT_white_paper.aux
+The style file: tex/atlasnote.bst
+Database file #1: Bayes_INT_white_paper.bib
+You've used 4 entries,
+            2318 wiz_defined-function locations,
+            561 strings with 4237 characters,
+and the built_in function-call counts, 987 in all, are:
+= -- 98
+> -- 30
+< -- 0
++ -- 12
+- -- 8
+* -- 60
+:= -- 129
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 61
+empty$ -- 125
+format.name$ -- 8
+if$ -- 261
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 10
+newline$ -- 20
+num.names$ -- 4
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 21
+stack$ -- 0
+substring$ -- 23
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 6
+width$ -- 5
+write$ -- 38

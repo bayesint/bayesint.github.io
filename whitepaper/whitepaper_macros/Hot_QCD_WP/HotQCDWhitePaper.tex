@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}      	
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{color}
+\usepackage{fancyhdr}
+%\usepackage{showlabels}           %%%%%%% TURN OFF for production copy %%%%%%%
+%\usepackage{lineno}                   %%%%%%% TURN OFF for production copy %%%%%%%
+%\usepackage{background}          %%%%%%% TURN OFF for production copy %%%%%%%
+
+
+%\usepackage{hyperref}
+%
+%
+% WAZ: turn off below for production copy
+%
+\usepackage[pagebackref=true,colorlinks=true]{hyperref}
+\hypersetup{
+     unicode=true,          % non-Latin characters in Acrobats bookmarks
+     pdfnewwindow=true,      % links to different pdfs in new window
+     bookmarksnumbered=true,
+     colorlinks=true,       % false: boxed links; true: colored links
+     linkcolor=blue,          % color of internal links
+     citecolor=darkgreen,        % color of links to bibliography
+     filecolor=magenta,      % color of file links
+     urlcolor=cyan,           % color of external links
+     menucolor=blue,
+     linktocpage=true
+}
+%\linenumbers                                                                                %%%%%%% TURN OFF for production copy %%%%%%%
+%\renewcommand{\showlabelfont}{\small\slshape\color{blue}}     %%%%%%% TURN OFF for production copy %%%%%%%
+%\showlabels{ref}                                                                           %%%%%%% TURN OFF for production copy %%%%%%%
+
+\urlstyle{rm} %have urls printed in normal font, not texttt font
+\textwidth 6.45in
+\textheight 9.0in
+\voffset -0.9in
+\hoffset -0.65in
+\renewcommand{\familydefault}{\sfdefault}
+
+%
+% WAZ: Below tweaks taken directly from http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html 
+%
+% Alter some LaTeX defaults for better treatment of figures:
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %
+    %   General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	        % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+%
+%   Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}                       % 2 may work better
+\setcounter{dbltopnumber}{2}                    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	        % allow minimal text w. figs
+%
+%   Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+%
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+
+\input{custom_defs.tex}
+
+\begin{document}
+
+
+\centerline{\Large \bf The Hot QCD White Paper:}
+\vspace{5mm}
+\centerline{\Large \bf Exploring the Phases of QCD at RHIC and the LHC}
+\vspace*{10mm}
+\begin{center}
+\large
+ A White Paper on Future Opportunities in Relativistic Heavy Ion Physics
+\vspace{5mm}
+\hrule
+\vspace{22mm}
+\normalsize
+\today
+\end{center}
+
+\vspace*{3cm}
+\begin{abstract}
+The past decade has seen huge advances in experimental measurements made in heavy ion collisions at the Relativistic Heavy Ion Collider (RHIC) and more recently at the Large Hadron Collider (LHC).
+These new data, in combination with theoretical advances from calculations made in a variety of frameworks, have led to a broad and deep knowledge of the properties of thermal QCD matter. 
+Increasingly quantitative descriptions of the
+quark-gluon plasma (QGP) created in these collisions have established that the QGP is a strongly coupled liquid with the lowest value of specific viscosity ever measured.
+However, much remains to be learned about the precise nature of the initial state from which this liquid forms, how its properties vary across its phase diagram and how, at a microscopic level, the collective properties of this liquid emerge from the interactions among the individual quarks and gluons that must be visible if the liquid is probed with sufficiently high resolution. This white paper, prepared by the Hot QCD Writing Group as part of the U.S. Long Range Plan for Nuclear Physics, reviews the recent progress in the field of hot QCD and outlines the scientific opportunities in the next decade for resolving the outstanding issues in the field.
+\end{abstract}
+
+\pagebreak
+
+\input{tex/Authors.tex}
+\eject
+
+\definecolor{darkgreen}{rgb}{0,.7,0}.
+
+\vspace*{-1.5cm}                                                       %To keep TOC on one page
+\renewcommand{\baselinestretch}{0.90}\normalsize %To keep TOC on one page
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+\eject
+
+\input{tex/Acronyms}
+\eject
+
+\listoffigures
+\addcontentsline{toc}{section}{\protect\numberline{}List of Figures}% Trick to get into Table of Contents
+\eject
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+%\renewcommand{\subsectionmark}[1]{ \markright{#1}{} }
+
+\input{tex/ExecutiveSummary}
+\eject
+
+\input{tex/Introduction}
+
+\input{tex/ProgressAndStatus}
+
+\input{tex/FutureProspects}
+
+\pagebreak
+\input{tex/Summary.tex}
+
+\pagebreak
+\input{tex/Acknowledgements.tex}
+
+
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{tex/atlasnote}  
+\bibliography{HotQCDWhitePaper}
+
+\end{document}
+

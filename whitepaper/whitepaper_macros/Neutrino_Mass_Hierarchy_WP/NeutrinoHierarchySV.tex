@@ -1,0 +1,233 @@
+\documentclass[12pt,letterpaper,amsmath,amssymb,final]{article}
+% Fun and exciting LaTeX packages!
+
+%Margins
+\usepackage[top=1.0in, bottom=1.0in, left = 1.0in, right=1.0in]{geometry}
+
+\usepackage{graphicx}% Include figure files 
+\usepackage{tabularx}% Include figure files 
+\usepackage{rotating}
+\usepackage{subfig}
+\usepackage{sidecap}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bbm}% blackboard bold
+\usepackage{textcomp}% I can't remember what this one does...
+\usepackage{color}% Change font colors
+\usepackage{gensymb}% Some nice math symbols...
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{array}
+\usepackage{lineno}
+\usepackage{hyperref}
+
+\setcounter{tocdepth}{3}
+
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{9}
+ 
+\renewcommand{\topfraction}{0.99}
+\renewcommand{\bottomfraction}{0.99}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{0.99}
+
+%\linenumbers
+
+ \def\begit{\begin{itemize}}
+\def\endit{\end{itemize}}
+\def\begc{\begin{center}}
+\def\endc{\end{center}}
+\def\begl{\begin{large}}
+\def\endl{\end{large}}
+\def\Begl{\begin{Large}}
+\def\Endl{\end{Large}}
+\def\begh{\begin{huge}\sf}
+\def\endh{\end{huge}}
+\def\non{\nonumber \\}
+\def\nonn{\nonumber\\[0.2in]}
+\def\begeq{\begin{equation}}
+\def\endeq{\end{equation}}
+\def\begeqar{\begin{eqnarray}}
+\def\endeqar{\end{eqnarray}}  
+\def\numu{\nu_\mu}
+\def\nubar{{\overline\nu}}
+\def\numubar{\overline\nu_\mu}
+\def\nue{\nu_e}
+\def\nuebar{\overline\nu_e}
+\def\nutau{\nu_\tau}
+\def\nutarbar{\overline\nu_\tar}
+\def\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$<$}}}         %less than or approx. symbol
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}         %greater than or approx. symbol
+
+\newcommand{\mbb}{\ensuremath{ m_{\beta\beta}}}
+\newcommand{\mbbs}{\ensuremath{ m_{\beta\beta}} }
+\newcommand{\nd}{$\mathrm{^{150}Nd}$}
+\newcommand{\Nova}{NO\ensuremath{\nu}A}
+\newcommand{\NOvA}{NO\ensuremath{\nu}A}
+
+\begin{document}
+
+\title{White Paper: Measuring the Neutrino Mass Hierarchy
+\vspace{1.8in}}
+\author{R. N. Cahn, D. A. Dwyer, S. J. Freedman$^{\dagger}$, W. C. Haxton, \vspace{0.2in}\\
+R. W. Kadel, Yu. G. Kolomensky\footnote{Co-chair}, 
+K. B. Luk, \vspace{0.2in}\\
+P. McDonald, G. D. Orebi Gann\footnotemark[\value{footnote}], A. W. P. Poon\vspace{0.5in}\\
+Lawrence Berkeley National Laboratory}
+
+%\affiliation{Lawrence Berkeley National Laboratory}
+
+\date{\today\vspace {1.8in}}
+
+\maketitle
+\noindent $^{\dagger}$\begin{em}{Our colleague Stuart Freedman was a member of the Neutrino Hierarchy
+Working Group.  His sudden passing, on November 10, 2012, was a
+terrible loss to the Nuclear Science and Physics Divisions at LBNL and
+to the entire international scientific community.  It was a great personal
+loss to those of us who were Stuart's friends.  Stuart set
+extraordinarily high standards for scientific inquiry and integrity.
+We hope that these are reflected in our report.}\end{em}
+\clearpage
+
+\begin{abstract}
+\em This whitepaper is a condensation of a report by a committee
+appointed jointly by the Nuclear Science and Physics Divisions at
+Lawrence Berkeley National Laboratory (LBNL). The goal of this study
+was to identify the most promising technique(s) for resolving the
+neutrino mass hierarchy.  For the most part,  we have relied on
+calculations and simulations presented by the proponents of the
+various experiments.  We have included evaluations of the
+opportunities and challenges for these experiments based on what is
+available already in the literature. 
+\end{abstract}
+
+\setcounter{tocdepth}{2}
+\tableofcontents{}
+
+\newpage
+\section{Executive Summary}
+\input{ExecSV.tex}
+
+\newpage
+\section{Introduction}\label{s:intro}
+\input{introSV}
+
+
+\section{Related Experiments that will not Resolve the Hierarchy}\label{s:not}
+\input{WontDoIt.tex}
+
+
+
+%\newpage
+%\section{Statistical Measurement of the Hierarchy}\label{s:stat}
+%\input{DAD/statistics.tex}
+
+%\newpage
+%\section{Solar Neutrinos}\label{s:sol}
+%\input{WH_Solar/solarnus_hierarchy}
+
+%\newpage
+%\section{Supernovae}\label{s:sn}
+%\input{WH_SN/supernova}
+
+%\newpage
+%\section{Direct Neutrino-Mass Measurements}\label{s:mass}
+%\input{AP/directmass}
+
+%\newpage
+%\section{Neutrinoless Double Beta Decay}\label{s:bb}
+%\input{GDOG/0nubb}
+
+
+\section{Long Baseline Experiments}\label{s:lb}
+
+The long-baseline experiments have sensitivity to the neutrino mass
+hierarchy, due to the interaction of neutrinos with matter as they
+pass through the Earth.  The baseline itself is a critical factor in
+the hierarchy sensitivity, and thus we consider the experiments in
+multiple categories: near term and relatively short baseline (T2K and
+\NOvA); the US-based long-baseline experiment (LBNE); and alternatives
+outside the US (primarily HyperK and LBNO).  While T2K has very little
+sensitivity to the hierarchy, due to the short baseline, \NOvA\ has the
+potential to make a measurement at the 2--3$\sigma$ level, dependent
+on the value of the CP phase parameter, $\delta_{CP}$. LBNE has
+demonstrated 2$\sigma$ (3$\sigma$) sensitivity over 100\% (80\%) of
+the values of $\delta_{CP}$ with 10 years of data.  LBNO has the
+potential to achieve a high sensitivity on a shorter timescale, due to
+the longer baseline (therefore increased sensitivity to the matter
+effects).  HyperK can achieve a similar sensitivity to LBNE on a
+similar timescale by combining the somewhat shorter baseline
+measurement with an independent atmospheric measurement in the same
+detector.  A combination of several
+experiments at different baselines (e.g. T2K+\NOvA , or T2K/\NOvA +LBNE,
+etc) can disentangle the competing effects of CP violation and
+matter-induced neutrino-antineutrino differences, and thus improve the
+constraints in the hierarchy significantly beyond any single
+measurement. 
+
+%\subsection{Can we measure the Mass Hierarchy at T2K or NOvA?}\label{s:tn}
+\subsection{T2K and \NOvA }\label{s:tn}
+\input{T2K_NOvA.tex}
+%\newpage
+\subsection{LBNE}\label{s:lbne}
+\input{LBNESV}
+
+\subsection{Non-US Options}\label{s:nonus}
+\input{LBL_noUS_SV}
+
+\section{Reactor Neutrinos}\label{s:reac}
+\input{reactorSV}
+
+
+\section{Atmospheric Neutrinos}\label{s:atm}
+\input{atmosphericSV}
+
+
+\section{Cosmology }\label{s:cosmo}
+\input{cosmologySV}
+
+%\newpage
+\section{Conclusions}
+\input{conclusionsSV}
+
+
+
+\section{Acknowledgments}
+We would like to thank Mark Strovink for contributions to this document, and many members of the Nuclear Science and Physics divisions at LBNL for enlightening conversations.
+
+\newpage
+
+\begin{thebibliography}{1}
+\input{biblioSV}
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
