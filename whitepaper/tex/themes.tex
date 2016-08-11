@@ -3,29 +3,56 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Implication of Bayesian philosophy/practices/concepts}  \label{subsec:implications}
-
-[\emph{This may go in section~\ref{subsec:conceptual_issues} instead.}]
+%\subsection{Implication of Bayesian philosophy/practices/concepts}  \label{subsec:implications}
+%
+%[\emph{This may go in section~\ref{subsec:conceptual_issues} instead.}]
+%
+%\bi
+%  \I emphasis of posterior vs.\ minimizing of $\chi^2$
+%  \I sampling vs.\ optimization  
+%\ei
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Likelihood function and Bayes theorem}  \label{subsec:L}
 
 \bi
-  \I emphasis of posterior vs.\ minimizing of $\chi^2$
-  \I sampling vs.\ optimization  
+  \I Recall Bayes theorem introduced (probably) in sec. \ref{subsec:basic_Bayes}
+  \I Define the likelihood function in both simple (1D) and advanced (ND) case
+  \I Posing the problem (and the notations): data = model + random error
+  $$ y(x) = \eta(x) + \epsilon  $$
+  \I Everything else follows: GP + MCMC to actually determine $x$, variations on 
+     the same theme for model defects ($\epsilon \rightarrow \epsilon + \delta(x)$ 
+     and augmented $\chi^2$, choice of prior for $x$, etc.
 \ei
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Discrepant functions / random effects}  \label{subsec:discrepant}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gaussian Process (GP) as a tool}  \label{subsec:GP_tool}
 
 \bi
+  \I GP simulates correlations between parameters
   \I emulators
   \I discrepant functions / random effects 
   \I linear regression $\rightarrow$ GP
   \I limitations: bad at emulating waveforms (Lackey)
 \ei
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Discrepant functions / random effects}  \label{subsec:discrepant}
+
+\bi
+  \I Model discrepancy: mock up what we know about the intrinsic limitations of 
+     our model into the posterior
+  \I data = model + truly random error + systematic bias
+  $$ y(x) = \eta(x) + \epsilon + \delta(x) $$
+  \I Example of nuclear masses: deviations near closed shells (particle-vibration 
+     coupling, pairing phase transition), at $N=Z$ (Wigner energy), in transitional 
+     nuclei (shape coexistence) are known but sometimes very hard (=computationally) 
+     to model
+  \I Using model discrepancies allow ``professional'' fitting of a model at some 
+     approximation while resulting parametrization is valid at higher resolution/order.
+     Ex.: fit at SR-EDF level, but parameters hopefully valid at MR-EDF
+  \I Avoid overfitting
+\ei
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\texorpdfstring{$\chi^2$}{chi-squared} and dofs}  \label{subsec:}
@@ -34,7 +61,7 @@
        \I $\chi^2/$dof is not meaningful for Bayesian statistics
        \I dofs when there are priors
        \I how should one count dofs?
-       \I augmented $\chi^2$
+       \I augmented $\chi^2$: distance from the prior (Bartek's talk?)
        \I When does $\chi^2/$dof make sense?
        \I AWS: Bayes' factors and Occam's razor
    \ei    
