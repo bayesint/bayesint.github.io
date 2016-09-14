@@ -98,6 +98,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Use of MCMC}  \label{subsec:using_mcmc}
 
+Monte Carlo integration methods are based on the idea that, if one
+has a way to generate a random deviate from a probability distribution
+defined by the integrand, then one can replace the integral by a sum
+(the same formalism applies trivially to multi-dimensional integrals)
+\begin{equation}
+  \int_a^{b} f(x) dx \approx \frac{\left( b-a\right)}{N} \sum_i p_i 
+\end{equation}
+where $p_i$ is a list of $N$ random numbers selected from the
+probability distribution $f(x)$ with $x \in [a,b]$. Monte
+Carlo is typically an efficient method of integration
+over direct integration for
+problems with large dimensionality. In some cases,
+selecting a random deviate from $f(x)$ is not straightforward.
+This problem can be handled by importance sampling: one decomposes
+$f(x)=g(x)h(x)$ where $g(x)$ is slowly varying with $x$ and $h(x)$
+is a function which one can more easily sample random deviates from.
+An excellent review is in Sokal (1980) [insert ref. here].
+
+Markov chain Monte Carlo is a type of
+importance sampling where one generates random deviates from $h(x)$
+by generating a ``Markov chain'', a set of numbers whose distribution
+asymptotically approaches $h(x)$.
+
   \bi
     \I must be able to evaluate quickly enough
     \I fast model vs. good emulator vs. slow function (dictates what you do)
