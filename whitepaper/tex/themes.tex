@@ -116,10 +116,55 @@ $f(x)=g(x)h(x)$ where $g(x)$ is slowly varying with $x$ and $h(x)$
 is a function which one can more easily sample random deviates from.
 An excellent review is in Sokal (1980) [insert ref. here].
 
-Markov chain Monte Carlo is a type of
+Markov chain Monte Carlo (MCMC) is a type of
 importance sampling where one generates random deviates from $h(x)$
 by generating a ``Markov chain'', a set of numbers whose distribution
-asymptotically approaches $h(x)$.
+asymptotically approaches $h(x)$. A common approach to generating
+a Markov chain is the Metropolis algorithm, but several other methods
+exist. The key to the Metropolis algorithm is ergodicity, and this
+property guarantees that values in the chain indeed converge to
+the desired distributions\footnote{When coding the Metropolis algorithm, we
+have found it relatively easy to make subtle errors which violate
+ergodicity, so the reader is warned to test their code.}.
+
+The scourge of MCMC methods is the presence of autocorrelations:
+adjacent elements the Markov chain are not completely independent. An
+excellent discussion of this is issue is in Ref.~[cite Sokal and Allen
+  and Tildesly]. There are two principal methods for overcoming these
+autocorrelations: (i) ``thinning'' the chain and selecting only those
+values which are farther apart than the autocorrelation length, and
+(ii) block averaging over blocks which have a size larger than the
+autocorrelation length.
+
+For a one-dimensional function, computing the autocorrelation length
+can be done directly using the 
+\begin{equation}
+  \ell(k) = \frac{1}{N-k} \sum_i^{N} (x_i- \bar{x})(x_{i+k}- \bar{x})
+\end{equation}
+the autocorrelation length is smallest value of $k$ for which
+$\ell(k)$ is zero (within the noise limits set by the size of the data
+set). Alternatively, one can \aws{I will describe the 'acor' method
+  here.} For multidimensional functions, it is important to note that
+the autocorrelation length of a functions parameters can be wildly
+different. In this case, the autocorrelation length of the chain is
+the largest autocorrelation length among all of the parameters.
+
+MCMC is particularly useful in Bayesian inference because one is
+often required to compute many integrals based on the same kernel,
+e.g.
+\begin{eqnarray}
+  I_1 & = & \int g_1 h d \vec{x} \nonumber \\
+  I_2 & = & \int g_2 h d \vec{x} \nonumber \\
+  I_3 & = & \int g_3 h d \vec{x} \nonumber \\
+\end{eqnarray}
+where the $g_i$ are slowly varying functions. In this case, MCMC
+methods generate a Markov chain for $h$, and then evaluate the
+functions $g_i$ for each (statistically independent) element in the
+chain. Even if the function $g_1$ is difficult to compute, 
+if the functions $g_{i,i\neq 1}$ are easy to compute given the
+result of $g_1$, there is a significant time savings to computing
+all of the integrals at one time.
+
 
   \bi
     \I must be able to evaluate quickly enough
