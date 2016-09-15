@@ -114,7 +114,6 @@ selecting a random deviate from $f(x)$ is not straightforward.
 This problem can be handled by importance sampling: one decomposes
 $f(x)=g(x)h(x)$ where $g(x)$ is slowly varying with $x$ and $h(x)$
 is a function which one can more easily sample random deviates from.
-An excellent review is in Sokal (1980) [insert ref. here].
 
 Markov chain Monte Carlo (MCMC) is a type of
 importance sampling where one generates random deviates from $h(x)$
@@ -127,23 +126,30 @@ the desired distributions\footnote{When coding the Metropolis algorithm, we
 have found it relatively easy to make subtle errors which violate
 ergodicity, so the reader is warned to test their code.}.
 
-The scourge of MCMC methods is the presence of autocorrelations:
-adjacent elements the Markov chain are not completely independent. An
-excellent discussion of this is issue is in Ref.~[cite Sokal and Allen
-  and Tildesly]. There are two principal methods for overcoming these
+Because points in the Metropolis algorithm are often chosen based on a
+random step (typically with a fixed maximum step size) from the
+previous point, adjacent points in the chain are not statistically
+independent. These autocorrelations are the scourge of MCMC methods.
+There are two principal methods~\cite{Allen89} for overcoming these
 autocorrelations: (i) ``thinning'' the chain and selecting only those
 values which are farther apart than the autocorrelation length, and
 (ii) block averaging over blocks which have a size larger than the
-autocorrelation length.
+autocorrelation length. Autocorrelations can often be decreased
+by increasing the maximum stepsize, but this comes at a cost of
+more Metropolis rejections. The optimal step size is that which
+minimizes the computational time between statistically independent
+points in the chain~\cite{Sokal80}.
 
 For a one-dimensional function, computing the autocorrelation length
 can be done directly using the 
 \begin{equation}
-  \ell(k) = \frac{1}{N-k} \sum_i^{N} (x_i- \bar{x})(x_{i+k}- \bar{x})
+  \ell(k) = \frac{1}{\sigma^2(N-k)}
+  \sum_i^{N-k} (x_i- \bar{x})(x_{i+k}- \bar{x})
 \end{equation}
 the autocorrelation length is smallest value of $k$ for which
 $\ell(k)$ is zero (within the noise limits set by the size of the data
-set). Alternatively, one can \aws{I will describe the 'acor' method
+set). Alternatively, one can use the Kubo formula to
+recast the expression... \aws{I will describe the 'acor' method
   here.} For multidimensional functions, it is important to note that
 the autocorrelation length of a functions parameters can be wildly
 different. In this case, the autocorrelation length of the chain is
@@ -152,11 +158,10 @@ the largest autocorrelation length among all of the parameters.
 MCMC is particularly useful in Bayesian inference because one is
 often required to compute many integrals based on the same kernel,
 e.g.
-\begin{eqnarray}
-  I_1 & = & \int g_1 h d \vec{x} \nonumber \\
-  I_2 & = & \int g_2 h d \vec{x} \nonumber \\
-  I_3 & = & \int g_3 h d \vec{x} \nonumber \\
-\end{eqnarray}
+\begin{equation}
+  I_1 = \int g_1 h d \vec{x} \quad ; \quad
+  I_2 = \int g_2 h d \vec{x} \quad ; \quad \ldots
+\end{equation}
 where the $g_i$ are slowly varying functions. In this case, MCMC
 methods generate a Markov chain for $h$, and then evaluate the
 functions $g_i$ for each (statistically independent) element in the
