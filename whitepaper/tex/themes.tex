@@ -17,12 +17,23 @@
 
 \bi
   \I Recall Bayes theorem introduced (probably) in sec. \ref{subsec:basic_Bayes}
-  \I Define the likelihood function in both simple (1D) and advanced (ND) case
   \I Posing the problem (and the notations): data = model + random error
-  $$ y(x) = \eta(x) + \epsilon  $$
+\beq
+y(\gras{x}) = \eta(\gras{x}) + \epsilon
+\eeq
+with $\eta$ a model that depends on parameters $\gras{x}$, and $\epsilon$ the 
+deviation between the output $\eta(\gras{x})$ of the model (a prediction) and 
+the experimental data $y(\gras{x})$
+  \I Define the likelihood function in both simple (1D) and advanced (ND) case
   \I Everything else follows: GP + MCMC to actually determine $x$, variations on 
      the same theme for model defects ($\epsilon \rightarrow \epsilon + \delta(x)$ 
      and augmented $\chi^2$, choice of prior for $x$, etc.
+  \I Example: nuclear forces $\hat{V}_{NN}$, $\hat{V}_{NNN}$, etc., are 
+     characterized by a set of parameters $\gras{x} = (x_1, \dots, x_N)$. The 
+     predictive power of any quantum many-body method, i.e., of a given model 
+     $\eta$, to reproduce nuclear properties $y$ such as masses, radii, 
+     separation energies, transition rates, etc., rely on our ability to obtain a 
+     reliable parametrization $\gras{x}$ which minimizes the deviation $\epsilon$.
 \ei
 
 \begin{figure}[h]

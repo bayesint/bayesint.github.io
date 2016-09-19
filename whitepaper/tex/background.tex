@@ -24,14 +24,13 @@
   \I In comparison to frequentist approaches, the emphasis is on sampling of posteriors
     rather than optimization (e.g., finding the maximum of the likelihood).
 
-  \I Philosophically, emphasis is put on prior knowledge. Textbook example of coin flipping: 
-     {\it If} the coin is perfect, then probability of next head or tail is 0.5 
-     {\it irrespective of history}. Contrariwise, putting a (non-uniform) prior 
-     in Bayesian framework implies that probability can be $\neq 0.5$
+  \I 
+One of the essential, philosophical, difference between Bayesian and frequentist approach is the emphasis put on prior knowledge. Consider the textbook example of coin tossing: 
+{\it If} the toss is perfectly random and the coin is perfect, {\it then} the probability $P$ of next head or tail is 0.5 {\it irrespective of the history} of all previous tosses. For example, there could already have been one million tosses that all gave head: in a strict frequentist approach, the probability of observing head in the next toss would remain 0.5 exactly. {\color{blue} I suppose we could introduce bias in our statistical model}. By contrast, Bayesian statistics provides a very natural framework to relax this strict interpretation. In our example, putting a (non-uniform) prior distribution to reflect the observation of these one millions heads implies that we accept that the coin may not be perfect and/or that the tosses were not truly random. As a consequence, the probability of observing a next head can be $\neq 0.5$.
 
-  \I Remark: in a scientific context, the notion of prior knowledge makes Bayesian approch
-     very pertinent, since there is almost always something we know about our model/experiment
-    
+  \I 
+In a scientific context, the notion of prior knowledge makes the Bayesian approach very pertinent, since there is almost always something we know about our model/experiment
+
   \I Younger generation statisticians do not have the baggage of the frequentist-Bayesian wars;
     they freely use both approaches as tools to do statistical analysis. 
 
