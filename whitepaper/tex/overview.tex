@@ -1,76 +1,15 @@
-%%%% Overview %%%%%%%%
-
-\section{Overview}  \label{sec:overview}
-
-\bi
-  \I The INT program on ``Bayesian Methods for Nuclear Physics'' brought together statisticians
-      and nuclear practitioners, principally theorists, to explore how Bayesian
-	  inference can enable progress on the frontiers of nuclear
-	  physics and open up new directions for the field.
-  \I The program also served as ISNET-4, the fourth meeting in a series helping researchers
-      bridge the gap between experiment and theory
-      (ISNET stands for Information and Statistics in Nuclear Experiment and Theory).   
-\ei
-
-With the maturation of calculational methods such as lattice QCD for hadronic
-physics, ab initio and density functional theory approaches for nuclear
-structure and reactions (with applications to astrophysics and fundamental
-symmetries), and viscous hydrodynamic modeling of relativistic heavy-ion
-collisions, nuclear theory is entering an era of precision calculations. This
-is leading to increased demand for sophisticated uncertainty quantification,
-to effectively interface with, inform, and analyze experiments. The methods
-used to quantify errors are often based on frequentist statistical analysis,
-but Bayesian methods are becoming increasingly popular.
-
-Bayesian statistics is a well-developed field, although it has not been part
-of the traditional education of nuclear theorists. In schematic form, Bayesian
-statistics treats the parameters or the model/theory as genuine random
-variables. It then uses Bayes theorem of probabilities to provide a recipe to
-compute their probability distribution (the “posterior”) in terms of prior
-information (e.g., about the data) and a likelihood function. For applications
-to fitting (“parameter estimation”), the posterior lets us infer, given the
-data we have measured, the most probable values of the parameters and predict
-values of observables with confidence intervals. Other applications involve
-deciding between alternative explanations or parameterizations (“model
-selection”). In practice, there are pitfalls in the implementation of this
-formalism and it is often a computationally hard problem.
-
-Interest in Bayesian statistics has increased significantly in the past 10
-years. The wide availability of large-scale computing resources has made the
-computation of the integrals needed for Bayesian inference easier. Modern
-experimental and observational facilities generate large amounts of data,
-often best analyzed and characterized through Bayesian methods. Bayesian
-methods are often preferred for under-constrained fits and inverse
-convolutions. In nuclear science, Bayesian methods have found their way into
-such areas as nuclear data, lattice QCD, dense matter, effective field theory,
-nuclear reactions, and parton distribution functions. These sub-fields have
-generally turned to Bayesian inference methods independently and in some cases
-without access to expert advice and guidance from professional statisticians.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Goals} \label{subsec:goals}
-
-Among the goals of the program and this white paper are to 
-\bi
-  \I facilitate cross communication, fertilization, and collaboration on Bayesian applications among the nuclear sub-fields; 
-  \I provide the opportunity for nuclear physicists who are unfamiliar with Bayesian methods to start applying them to new problems; 
-  \I learn from the experts about innovative and advanced uses of Bayesian statistics, and best practices in applying them; 
-  \I learn about advanced computational tools and methods; 
-  \I critically examine the application of Bayesian methods to particular physics problems in the various subfields;
-  \I build a knowledge base.
-\ei  
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Building this document} \label{subsec:document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Building this document}
 
 [\emph{This subsection is only part of the working document, not the final version.}]
 
 \bi
   \I Editors are the organizers of the program (Furnstahl, Higdon, Schunck, Steiner).
-     In this capacity they are to provide a coherent narrative and make the final decisions 
+     In this capacity they are to provide a coherent narrative and make the final decisions
      on what content is included.
   \I Contributors are self-selected participants in the program.  They might be designated
       the Bayes-INT Working Group.
@@ -85,195 +24,281 @@ Guidelines for building the document:
      \bi
        \I We will build the document with a convenient structure (e.g., with
           a table of contents) and later decide on a publication plan.
-       \I The Journal of Physics G LaTeX format is a possibility because this journal is a 
+       \I The Journal of Physics G LaTeX format is a possibility because this journal is a
        likely target for a published version.
-       \I To get started, we will borrow a format from an existing white paper. 
-     \ei  
-  \I Organization of files 
-     \bi         
+       \I To get started, we will borrow a format from an existing white paper.
+     \ei
+  \I Organization of files
+     \bi
        \I Use Git, hosted on Github.  Each contributor can make their own branch, and
           resolution of conflicts from merging will be made by the Editors.
        \I Standardized list of macros in macros.tex.  Use a macro whenever possible to
           facilitate developing a standardized notation, which can be easily modified.
        \I Use BibTeX for references (newer version?).  Include the titles in the style
            to more easily identify sources.
-       \I For early passes through new materials, use bullets (or enumerated lists) to enter content.    This makes it modular and easy to adjust the ordering and structure. 
-     \ei  
+       \I For early passes through new materials, use bullets (or enumerated lists) to enter content.    This makes it modular and easy to adjust the ordering and structure.
+     \ei
   \I Figures
-     \bi      
+     \bi
        \I Plan to use original figures for schematic illustration as much as possible
-       \I But point specifically to figures in the literature  
-     \ei  
-  \I Associated computer codes.  We can include as part of the supplementary material 
+       \I But point specifically to figures in the literature
+     \ei
+  \I Associated computer codes.  We can include as part of the supplementary material
       Mathematica and Ipython notebooks.
 \ei
 
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% Overview %%%%%%%%
+
+\section{Overview}  \label{sec:overview}
+
+With the maturation of calculational methods such as lattice QCD for hadronic
+physics, ab initio, shell model and density functional theory approaches for
+nuclear structure and reactions (with applications to astrophysics and fundamental
+symmetries), and viscous hydrodynamic modeling of relativistic heavy-ion
+collisions, nuclear theory is entering an era of precision calculations.
+In all these various subfields of nuclear physics, however, theories always
+depend on several free parameters that are not defined within the theory and
+must be adjusted by comparing model predictions to experimental data. In addition,
+experimental data may suffer from weak statistics and poor signal-to-noise
+ratio, or may have been extracted through a model-dependent procedure. Such issues
+lead to increased demand for sophisticated uncertainty
+quantification, to effectively interface with, inform, and analyze experiments.
+Although the methods used to quantify errors are often based on frequentist statistical
+analysis, Bayesian methods have recently become increasingly popular.
+
+Bayesian statistics is a well-developed field, although it has not been part
+of the traditional education of nuclear theorists. In schematic form, Bayesian
+statistics treats the parameters or the model/theory as genuine random
+variables. It then uses Bayes theorem of probabilities to provide a recipe to
+compute their probability distribution (the ``posterior'') in terms of prior
+information (e.g., about the data) and a likelihood function. For applications
+to fitting (``parameter estimation''), the posterior lets us infer, given the
+data we have measured, the most probable values of the parameters and predict
+values of observables with confidence intervals. Other applications involve
+deciding between alternative explanations or parameterizations (``model
+selection''). In practice, there are pitfalls in the implementation of this
+formalism and it is often a computationally hard problem.
+
+Interest in Bayesian statistics has increased significantly in the past 10
+years. The wide availability of large-scale computing resources has made the
+computation of the integrals needed for Bayesian inference easier. Modern
+experimental and observational facilities generate large amounts of data,
+often best analyzed and characterized through Bayesian methods. Bayesian
+methods are often preferred for under-constrained fits and inverse
+convolutions. In nuclear science, Bayesian methods have found their way into
+such areas as nuclear data, lattice QCD, dense matter, effective field theory,
+nuclear reactions, and parton distribution functions. These sub-fields have
+generally turned to Bayesian inference methods independently and in some cases
+without access to expert advice and guidance from professional statisticians.
+
+The INT program on ``Bayesian Methods for Nuclear Physics'' brought together
+statisticians and nuclear practitioners, principally theorists, to explore how
+Bayesian inference could enable progress on the frontiers of nuclear physics
+and open up new directions for the field. The program also served as ISNET-4,
+the fourth meeting in a series helping researchers bridge the gap between
+experiment and theory (ISNET stands for Information and Statistics in Nuclear
+Experiment and Theory). The goal of this whitepaper is to summarize the
+topics that have been discussed during the program and serve as a reference
+for applications of Bayesian statistics in nuclear theory.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Goals} \label{subsec:goals}
+
+% Bayesian 101 for physicists
+The Bayesian approach to statistics is not necessarily a part of the curriculum
+of physics studies. The first goal of the workshop was to provide the
+opportunity for nuclear physicists unfamiliar with Bayesian methods with an
+in-depth introduction to Bayesian methods by experts in the field. In this
+document, we pay special attention to presenting Bayesian methods in a language
+understandable by most nuclear physicists, and with examples taken from actual
+applications -- mostly in nuclear theory.
+
+% Finding new problems for statisticians
+Contrariwise, nuclear physics is a source of non-trivial problems for
+experts in Bayesian statistics. Large datasets, models that are by definition
+incorrect, non-linearities of the models, computationally-intensive models
+present opportunities to test statistical methods in non-traditional settings.
+A second goal of the program was to facilitate cross communication,
+fertilization, and collaboration on Bayesian applications among the nuclear
+sub-fields.
+
+% Practical examples and applications
+One of the reasons Bayesian methods have gained popularity is the increased
+availability of large-scale computing capabilities. In practice, constructing
+the Bayesian posterior distribution often comes down to Markov Chain Monte
+Carlo simulations of the model. When the model is too time- or resource-consuming
+to run, it is sometimes possible to build an emulator and treat the parameters
+of the emulator on the same footing as the parameters of the original model,
+i.e., obtain a full estimate of uncertainties of both model and emulator
+parameters. Nuclear theory presents several case studies for such approaches,
+and a third goal of the program was to learn from the experts about advanced
+computational tools and methods.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Questions} \label{subsec:questions}
 
-In the following subsections are (partial) lists of questions that were considered 
-during the INT program.  [\emph{Synthesize these into a more compact list of questions 
-that we plan to
-address in this white paper.}]
-
-[{\color{red} NS:  There is a strong overlap between all these questions and what is in 
-the Themes section. Possible compact list of questions:
+In the following subsections are (partial) lists of questions that were considered
+during the INT program.
 \bi
   \I What are Bayesian and Frequentist approaches and how different are they?
   \I What are the advantages/pitfalls of Bayesian approaches in nuclear physics?
   \I What is the best literature (for physicists) on Bayesian approaches?
-  \I Does nuclear physics present opportunities for ''Bayesists'' to advance their 
+  \I Does nuclear physics present opportunities for ''Bayesists'' to advance their
      field?
 \ei
-I think everything else, currently under sections 1.3.2, 1.3.3, 1.3.4, 1.3.5, should 
-not stricto sensu be in the form of questions but should be discussed in the 
-appropriate subsection of the Theme section.}
-]
 
-\subsubsection{General questions}
 
-  \bi
-    \I What do Bayesian techniques offer that frequentist
-      statistics do not?
-    \bi
-      \I Also, what kinds of problems ill-suited for
-	Bayesian or frequentist approaches?
-    \ei
-    \I What is the modern view of the conflict (if any)
-      between Bayesian and frequentist statistics?
-    \I What are the best references (e.g., texts or
-      pedagogical reviews) for introductory Bayesian
-      statistics and for advanced topics?
-    \bi
-      \I As we compile lists: What are we missing? Are there
-	more modern versions?
-    \ei
-    \I What are the common or subtle pitfalls that novices to
-      Bayesian methods fall into?
-    \I What are we likely unaware of on the frontier of
-      (Bayesian) statistical methods?
-    \bi
-      \I D. Furnstahl: In
-	interacting with applied mathematicians I've found that
-	physicists are often using the Numerical Recipes version
-	of numerical methods, while the state-of-the-art is one
-	or two generations more advanced. What are the analogs
-	for statistics?
-      \I A Steiner: I'm currently using Goodman and Weare
-	(2010)'s affine-invariant MCMC. Is there any way
-	to do better? I'd like to get more accurate results
-	with fewer samples. Will Metropolis-Hastings methods
-	be superior if I have a sufficiently accurate
-	proposal distribution?
-    \ei
-  \ei
-  
-  \subsubsection{Parameter estimation, model calibration, and
-      model selection}
-
-  \bi
-    \I What is the difference between model calibration and
-      parameter estimation?
-    \I How should one do basic regression analysis?
-    \bi
-      \I The old-school theoretical physics way is to do a
-	least-squares fit with adding penalty terms for
-	theoretical errors (which could be from the model or
-	from the numerical method used to calculate the model)
-	in quadrature to the data errors.
-      \I When the theoretical systematic uncertainty is not
-	known, one often determines the overall scale by
-	requiring \( \chi^2/\mathrm{dof} = 1 \)
-	(Birge factor). How is this done in
-	Bayesian statistics?
-      \I When should a nuclear model with systematic theory
-	errors have a statistical distribution of residuals?
-      \I What are appropriate Bayesian priors?
-      \I A. Steiner: How does one deal with the
-	ambiguity created by heteroscedasticity? E.g.
-	if we have two types of data points in a
-	\( \chi^2 \) fit, how do we decide the
-	relative theoretical uncertainty between
-	the two types?
-    \ei
-    \I What approximations or techniques are useful for
-      reducing computational cost?
-    \I What is Approximate Bayesian Computation?
-    \I What method should I use for calculating the evidence
-      or odds ratios?
-    \bi
-      \I e.g., simulated annealing, nested sampling, analytic
-	approximations, ...
-      \I What are the pros and cons?
-    \ei
-    \I How do we propagate theoretical uncertainties (e.g.,
-      from truncations of an expansion or limitations of a physics
-      model) to calculations of physics observables?
-  \ei
-  
-  \subsubsection{Priors}
-
-  \bi
-    \I What is Bayesian model checking and how can it be used
-      to minimize or validate the influence of priors?
-    \I What are other ways to validate priors?
-    \I How does empirical Bayes work and when is it useful
-      (or dangerous)?
-    \I How do we choose priors for systematic errors in
-      physics?
-    \bi
-      \I E.g., what general guidance is there?
-      \I What range of priors should I consider?
-      \I How does one choose a ``non-informative'' prior?
-    \ei
-  \ei
-  
-  \subsubsection{Software}
-
-  \bi
-    \I What should we know about MCMC sampling algorithms and
-      software?
-    \bi
-      \I MCMC programs are often a black box to physicists.
-      \I What are recommended implementations for different
-	types of physics applications?
-      \I Are there parallelized versions?
-      \I What are the pitfalls or ``tricks'' in using MCMC?
-      \I Should one use more than one algorithm?
-    \I Autocorrelations in MCMC
-    \bi
-      \I A. Steiner: I'm using the method outlined
-	\url{http://www.math.nyu.edu/faculty/goodman/teaching/MonteCarlo2005/notes/MCMC.pdf}
-	similar to the \href{http://www.math.nyu.edu/faculty/goodman/software/acor/}{acor} program used in \href{http://dan.iel.fm/emcee/}{emcee}.
-      
-    \ei
-    \ei
-    \I What are good programs for visualization (e.g., of
-      projected posteriors)?
-    \I What are the best software options for Python, C++, R, ...  
-  \ei
-
-  \subsubsection{Other topics}
-
-  \bi
-    \I Inconsistent data (or model)
-    \I Outliers
-    \I Model and uncertainty extrapolation
-    \I Empirical Bayes
-    \I Emulation
-
-    \I 
-      A Steiner: In nuclear astrophysics, in order to
-      perform a proper uncertainty quantification, we need two
-      things: (i) the correlations between masses in the
-      Atomic Mass Evaluation, and (ii) the correlations
-      between parameters in popular mass models (e.g. FRDM).
-      How do we get those?
-    
-    \I A. Steiner: What can be understood from the
-      analogy between a particle propagator and a conditional
-      probability distribution? Or does the fact that the
-      former is defined over complex numbers spoil the analogy?
-    \ei
+%\subsubsection{General questions}
+%
+%  \bi
+%    \I What do Bayesian techniques offer that frequentist
+%      statistics do not?
+%    \bi
+%      \I Also, what kinds of problems ill-suited for
+%	Bayesian or frequentist approaches?
+%    \ei
+%    \I What is the modern view of the conflict (if any)
+%      between Bayesian and frequentist statistics?
+%    \I What are the best references (e.g., texts or
+%      pedagogical reviews) for introductory Bayesian
+%      statistics and for advanced topics?
+%    \bi
+%      \I As we compile lists: What are we missing? Are there
+%	more modern versions?
+%    \ei
+%    \I What are the common or subtle pitfalls that novices to
+%      Bayesian methods fall into?
+%    \I What are we likely unaware of on the frontier of
+%      (Bayesian) statistical methods?
+%    \bi
+%      \I D. Furnstahl: In
+%	interacting with applied mathematicians I've found that
+%	physicists are often using the Numerical Recipes version
+%	of numerical methods, while the state-of-the-art is one
+%	or two generations more advanced. What are the analogs
+%	for statistics?
+%      \I A Steiner: I'm currently using Goodman and Weare
+%	(2010)'s affine-invariant MCMC. Is there any way
+%	to do better? I'd like to get more accurate results
+%	with fewer samples. Will Metropolis-Hastings methods
+%	be superior if I have a sufficiently accurate
+%	proposal distribution?
+%    \ei
+%  \ei
+%
+%  \subsubsection{Parameter estimation, model calibration, and
+%      model selection}
+%
+%  \bi
+%    \I What is the difference between model calibration and
+%      parameter estimation?
+%    \I How should one do basic regression analysis?
+%    \bi
+%      \I The old-school theoretical physics way is to do a
+%	least-squares fit with adding penalty terms for
+%	theoretical errors (which could be from the model or
+%	from the numerical method used to calculate the model)
+%	in quadrature to the data errors.
+%      \I When the theoretical systematic uncertainty is not
+%	known, one often determines the overall scale by
+%	requiring \( \chi^2/\mathrm{dof} = 1 \)
+%	(Birge factor). How is this done in
+%	Bayesian statistics?
+%      \I When should a nuclear model with systematic theory
+%	errors have a statistical distribution of residuals?
+%      \I What are appropriate Bayesian priors?
+%      \I A. Steiner: How does one deal with the
+%	ambiguity created by heteroscedasticity? E.g.
+%	if we have two types of data points in a
+%	\( \chi^2 \) fit, how do we decide the
+%	relative theoretical uncertainty between
+%	the two types?
+%    \ei
+%    \I What approximations or techniques are useful for
+%      reducing computational cost?
+%    \I What is Approximate Bayesian Computation?
+%    \I What method should I use for calculating the evidence
+%      or odds ratios?
+%    \bi
+%      \I e.g., simulated annealing, nested sampling, analytic
+%	approximations, ...
+%      \I What are the pros and cons?
+%    \ei
+%    \I How do we propagate theoretical uncertainties (e.g.,
+%      from truncations of an expansion or limitations of a physics
+%      model) to calculations of physics observables?
+%  \ei
+%
+%  \subsubsection{Priors}
+%
+%  \bi
+%    \I What is Bayesian model checking and how can it be used
+%      to minimize or validate the influence of priors?
+%    \I What are other ways to validate priors?
+%    \I How does empirical Bayes work and when is it useful
+%      (or dangerous)?
+%    \I How do we choose priors for systematic errors in
+%      physics?
+%    \bi
+%      \I E.g., what general guidance is there?
+%      \I What range of priors should I consider?
+%      \I How does one choose a ``non-informative'' prior?
+%    \ei
+%  \ei
+%
+%  \subsubsection{Software}
+%
+%  \bi
+%    \I What should we know about MCMC sampling algorithms and
+%      software?
+%    \bi
+%      \I MCMC programs are often a black box to physicists.
+%      \I What are recommended implementations for different
+%	types of physics applications?
+%      \I Are there parallelized versions?
+%      \I What are the pitfalls or ``tricks'' in using MCMC?
+%      \I Should one use more than one algorithm?
+%    \I Autocorrelations in MCMC
+%    \bi
+%      \I A. Steiner: I'm using the method outlined
+%	\url{http://www.math.nyu.edu/faculty/goodman/teaching/MonteCarlo2005/notes/MCMC.pdf}
+%	similar to the \href{http://www.math.nyu.edu/faculty/goodman/software/acor/}{acor} program used in \href{http://dan.iel.fm/emcee/}{emcee}.
+%
+%    \ei
+%    \ei
+%    \I What are good programs for visualization (e.g., of
+%      projected posteriors)?
+%    \I What are the best software options for Python, C++, R, ...
+%  \ei
+%
+%  \subsubsection{Other topics}
+%
+%  \bi
+%    \I Inconsistent data (or model)
+%    \I Outliers
+%    \I Model and uncertainty extrapolation
+%    \I Empirical Bayes
+%    \I Emulation
+%
+%    \I
+%      A Steiner: In nuclear astrophysics, in order to
+%      perform a proper uncertainty quantification, we need two
+%      things: (i) the correlations between masses in the
+%      Atomic Mass Evaluation, and (ii) the correlations
+%      between parameters in popular mass models (e.g. FRDM).
+%      How do we get those?
+%
+%    \I A. Steiner: What can be understood from the
+%      analogy between a particle propagator and a conditional
+%      probability distribution? Or does the fact that the
+%      former is defined over complex numbers spoil the analogy?
+%    \ei
 
